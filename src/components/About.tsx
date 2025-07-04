@@ -1,94 +1,51 @@
-
-import { Award, Users, Target, Heart } from 'lucide-react';
+import { useState } from 'react';
 
 const About = () => {
-  const values = [
-    {
-      icon: Target,
-      title: 'Precision',
-      description: 'Every detail matters in creating the perfect space for our clients.'
-    },
-    {
-      icon: Heart,
-      title: 'Passion',
-      description: 'We love what we do and it shows in every project we complete.'
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'Award-winning designs that exceed expectations every time.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'Working closely with clients to bring their vision to life.'
-    },
-  ];
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="about" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-gradient-gold">
-              About Royal Interior
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              With over 15 years of experience in luxury interior design, we have established ourselves 
-              as the premier choice for discerning clients who demand excellence. Our team of skilled 
-              designers and craftsmen work tirelessly to transform spaces into works of art.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              From contemporary minimalism to classic elegance, we specialize in creating bespoke 
-              interiors that reflect your personality while maintaining the highest standards of 
-              quality and sophistication.
-            </p>
+    <>
+      {/* Background Section */}
+      <div id="about" className="  border-t-8 relative w-full h-screen overflow-hidden">
+        <img
+          className="object-cover w-full h-full"
+          src="/royalbg.jpg" // Assuming the image is in public folder
+          alt="Background"
+        />
 
-            {/* Values Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="mx-auto mb-3 p-2 rounded-full gradient-gold w-fit">
-                    <value.icon className="h-6 w-6 text-black" />
-                  </div>
-                  <h3 className="font-playfair font-semibold text-foreground mb-2">
-                    {value.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {value.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Interior Design Studio"
-                className="w-full h-[600px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-            </div>
-            
-            {/* Floating Stats Card */}
-            <div className="absolute -bottom-6 -left-6 bg-card/95 backdrop-blur-md p-6 rounded-lg border border-border/50 shadow-2xl">
-              <div className="text-center">
-                <div className="text-3xl font-playfair font-bold text-gradient-gold mb-1">
-                  500+
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  Dream Spaces Created
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Centered Button */}
+        <div className="absolute inset-0 flex justify-center items-center">
+          <button
+            className=" text-white px-6 py-3 tracking-[0.2rem] bg-black/5 font-semibold gap-5 rounded-3xl text-lg  hover:bg-white hover:text-black transition duration-300"
+            onClick={() => setIsOpen(true)}
+          >
+           ABOUT ROYAL INTERIOR
+          </button>
         </div>
       </div>
-    </section>
+
+      {/* Modal */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50">
+          <div className="bg-white text-black rounded-lg p-6 max-w-lg w-full shadow-lg relative">
+            <button
+              className="absolute top-2 right-3 text-black text-xl font-bold"
+              onClick={() => setIsOpen(false)}
+            >
+              &times;
+            </button>
+            <h2 className="text-2xl font-bold mb-4">About Royal Interior</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              With over 15 years of experience in luxury interior design, we have established ourselves 
+              as the premier choice for discerning clients who demand excellence. Our team of skilled 
+              designers and craftsmen work tirelessly to transform spaces into works of art. From contemporary 
+              minimalism to classic elegance, we specialize in creating bespoke interiors that reflect your 
+              personality while maintaining the highest standards of quality and sophistication.
+            </p>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

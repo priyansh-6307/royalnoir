@@ -31,10 +31,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-playfair font-bold text-gradient-gold mb-4">
+            <h3 className="text-2xl font-playfair font-bold text-white  mb-4">
               Royal Interior
             </h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-white mb-6 leading-relaxed">
               Transforming spaces into luxury experiences with 15+ years of expertise in premium interior design.
             </p>
             <div className="flex space-x-4">
@@ -42,7 +42,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="p-2 rounded-full bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-colors"
+                  className="p-2 rounded-full bg-secondary hover:bg-primary/20 text-white hover:text-primary transition-colors"
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />
@@ -61,7 +61,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-white hover:text-primary transition-colors"
                   >
                     {link.name}
                   </a>
@@ -76,9 +76,9 @@ const Footer = () => {
               Services
             </h4>
             <ul className="space-y-3">
-              {services.map((service, index) => (
+              {services.map((service, index) => ( 
                 <li key={index}>
-                  <div className="text-muted-foreground">
+                  <div className="text-white">
                     {service}
                   </div>
                 </li>
@@ -94,13 +94,13 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-primary mr-3" />
-                <div className="text-muted-foreground">
-                  <div>+1 (555) 123-4567</div>
+                <div className="text-white">
+                  <div>+91 9711976969</div>
                 </div>
               </div>
               <div className="flex items-center">
-                <Mail className="h-5 w-5 text-primary mr-3" />
-                <div className="text-muted-foreground">
+                <Mail className="h-5 w-5 text-white mr-3" />
+                <div className="text-white">
                   info@royalinterior.com
                 </div>
               </div>
@@ -110,17 +110,17 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-muted-foreground text-sm mb-4 md:mb-0">
+          <div className="text-white text-sm mb-4 md:mb-0">
             © 2024 Royal Interior. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="#" className="text-white hover:text-primary transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="#" className="text-white hover:text-primary transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="#" className="text-white hover:text-primary transition-colors">
               Cookie Policy
             </a>
           </div>
