@@ -57,7 +57,7 @@ const Contact = () => {
             <div className="space-y-3 text-sm">
               <p>📞 +91 9711976969</p>
               <p>📞 +91 7088914558</p>
-              <p>📧 royalinterior@example.com</p>
+              <p>📧 royalinterior.com</p>
               <p>📍galleria market, Gaur Yamuna City, g-32, Greater Noida, Uttar Pradesh 203201 </p>
               <a
                 href="https://wa.me/9711976969"
