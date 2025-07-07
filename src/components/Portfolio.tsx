@@ -30,7 +30,7 @@ const Portfolio = () => {
       id: 3,
       title: 'Venetian Blinds',
       category: 'Window Treatments',
-      images: ['venetianblinds.jpg', 'venetianblinds2.jpg'],
+      images: ['venetianblinds.jpg', 'venetianblinds2.png'],
       description: 'Sleek aluminum or wooden blinds offering precise light control with a modern look.',
       detailedDescription: 'Choose from aluminum, faux wood, or natural wood Venetian blinds available in multiple slat sizes. Our blinds offer excellent light control, UV protection, and are easy to clean, making them ideal for both residential and commercial spaces.'
     },
