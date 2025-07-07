@@ -22,7 +22,7 @@ const Portfolio = () => {
       id: 2,
       title: 'Curtain Rods',
       category: 'Home Essentials',
-      images: ['curtainrods.jpg', 'curtainrods2.jpg'],
+      images: ['curtainrods.jpg', 'curtainrods2.webp'],
       description: 'Stylish and durable curtain rod fittings for all types of window treatments and drapery setups.',
       detailedDescription: 'Our curtain rods come in a variety of finishes including stainless steel, brass, and matte black. We offer single, double, and motorized rod systems to suit traditional and contemporary drapery needs, ensuring seamless installation and operation.'
     },
@@ -38,7 +38,7 @@ const Portfolio = () => {
       id: 4,
       title: 'Vertical Blinds',
       category: 'Window Treatments',
-      images: ['verticalblinds.jpg', 'verticalblinds2.jpg'],
+      images: ['verticalblinds.jpg', 'verticalblinds2.avif'],
       description: 'Elegant vertical blinds ideal for large windows and sliding doors with smooth operation.',
       detailedDescription: 'Our vertical blinds are available in fabric, PVC, and aluminum materials, with customizable colors and textures. Perfect for large windows and sliding doors, they provide excellent light filtering and privacy with smooth, durable operation.'
     },
@@ -46,7 +46,7 @@ const Portfolio = () => {
       id: 5,
       title: 'Wall Paper',
       category: 'Wall Finishes',
-      images: ['wallpaper.jpg', 'wallpaper2.jpg', 'wallpaper3.jpg'],
+      images: ['wallpaper.jpg', 'wallpaper2.jpg', 'wallpaper3.webp'],
       description: 'Premium decorative wallpapers in various textures and patterns for every room style.',
       detailedDescription: 'We offer an extensive range of wallpapers, including vinyl, non-woven, and textured options. From bold patterns to subtle hues, our wallpapers are designed for durability, easy maintenance, and to transform any room into a stylish space.'
     },
@@ -62,7 +62,7 @@ const Portfolio = () => {
       id: 7,
       title: 'Modular Kitchen',
       category: 'Kitchen Design',
-      images: ['modularkitchen.jpg', 'modularkitchen2.jpg'],
+      images: ['modularkitchen.jpg', 'modularkitchen2.webp'],
       description: 'Space-optimized modular kitchen setups with stylish cabinets and functional layouts.',
       detailedDescription: 'Our modular kitchens feature customizable cabinetry, countertops, and storage solutions in materials like laminate, acrylic, and wood. Designed for functionality and style, we offer L-shaped, U-shaped, and island layouts to suit any space.'
     },
@@ -70,7 +70,7 @@ const Portfolio = () => {
       id: 8,
       title: 'Wooden Works',
       category: 'Carpentry Solutions',
-      images: ['woodenwork.jpeg', 'woodenwork2.jpeg'],
+      images: ['woodenwork.jpeg', 'woodenwork2.webp'],
       description: 'Expert woodworking services for furniture, cabinetry, and custom wood installations.',
       detailedDescription: 'Our woodworking services include custom furniture, cabinetry, and decorative wood panels crafted from oak, teak, and plywood. Each piece is designed with precision, offering both aesthetic appeal and long-lasting durability.'
     },
@@ -86,15 +86,15 @@ const Portfolio = () => {
       id: 10,
       title: 'Wooden Flooring',
       category: 'Flooring Solutions',
-      images: ['woodenflooring.jpg', 'woodenflooring2.jpg'],
+      images: ['woodenflooring.jpg', 'woodenflooring2.webp'],
       description: 'Durable and elegant wooden flooring for a natural and timeless interior finish.',
       detailedDescription: 'We offer hardwood, engineered wood, and laminate flooring options in species like oak, maple, and walnut. Our flooring solutions are durable, easy to maintain, and provide a timeless aesthetic for any interior.'
     },
     {
       id: 11,
-      title: 'Ceiling Zipsum Tile',
+      title: 'Ceiling Gypsum Tile',
       category: 'Ceiling Design',
-      images: ['ceilingzipsumtile.jpg', 'ceilingzipsumtile2.jpg'],
+      images: ['ceilingzipsumtile.jpg', 'ceilingzipsumtile2.webp'],
       description: 'Decorative gypsum ceiling tiles for a refined and modern false ceiling look.',
       detailedDescription: 'Our gypsum ceiling tiles come in intricate designs and patterns, perfect for creating elegant false ceilings. Lightweight and fire-resistant, they are ideal for both residential and commercial spaces.'
     },
@@ -110,7 +110,7 @@ const Portfolio = () => {
       id: 13,
       title: 'Glass Films',
       category: 'Glass Enhancements',
-      images: ['glassfilm.jpg', 'glassfilm2.jpg'],
+      images: ['glassfilm.jpg', 'glassfilm2.jpeg'],
       description: 'Privacy and decorative films for windows and glass partitions with UV protection.',
       detailedDescription: 'Our glass films include frosted, tinted, and decorative options, offering privacy, UV protection, and aesthetic enhancement. Easy to apply, they are perfect for windows, glass doors, and partitions.'
     },
@@ -118,7 +118,7 @@ const Portfolio = () => {
       id: 14,
       title: 'Doors',
       category: 'Interior Solutions',
-      images: ['doorimg.jpeg', 'doorimg2.jpeg'],
+      images: ['doorimg.jpeg', 'doorimg2.webp','pvcdoor.webp'],
       description: 'Designer doors in wood, glass, or laminate finish to match your home’s aesthetics.',
       detailedDescription: 'We provide a wide range of doors, including steel profile doors, solid wooden doors, PVC doors, and glass doors. Each is crafted for durability, security, and style, with customizable finishes to match your interior.'
     },
@@ -200,9 +200,9 @@ const Portfolio = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 text-xs tracking-wider uppercase"
+                    className="border-white/20 text-black hover:bg-white hover:text-black transition-all duration-300 text-xs tracking-wider uppercase"
                   >
-                    Get Quote
+                    More info
                     <ExternalLink className="ml-2 h-3 w-3" />
                   </Button>
                 </div>
