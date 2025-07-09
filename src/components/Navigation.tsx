@@ -42,11 +42,11 @@ const Navigation = () => {
         isScrolled ? 'bg-black/30 backdrop-blur-sm md:bg-transparent' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-1 sm:px-2 lg:px-8">
+      <div className="container mx-auto px-1 sm:px-2 lg:px-8 relative">
         {/* Header with logo and mobile menu button */}
         <div className="flex items-center h-full md:justify-between">
           {/* Logo - Centered on mobile, left on desktop */}
-          <div className="flex justify-center w-full md:w-auto md:justify-start">
+          <div className="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0 md:w-auto md:justify-start">
             <img
               src="royal_logo.png"
               alt="Royal Interior Logo"
@@ -81,7 +81,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center justify-end w-full">
             <Button
               variant="ghost"
               size="sm"
@@ -143,7 +143,7 @@ const Navigation = () => {
               <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
                 <p>📞 <a href="tel:+919711976969" className="hover:underline">+91 9711976969</a></p>
                 <p>📞 <a href="tel:+917088914558" className="hover:underline">+91 7088914558</a></p>
-                <p>📧 <a href="mailto:royalinterior@example.com" className="hover:underline">atifaslam60193@gmail.com</a></p>
+                <p>📧 <a href="mailto:royalinterior@example.com" className="hover:underline">royalinterior@example.com</a></p>
                 <p>📍 Galleria Market, Gaur Yamuna City, G-32, Greater Noida, Uttar Pradesh 203201</p>
                 <a
                   href="https://wa.me/9711976969"
