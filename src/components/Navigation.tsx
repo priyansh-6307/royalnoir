@@ -81,7 +81,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center justify-end w-full">
+          <div className="z-10 md:hidden flex items-center justify-end w-full">
             <Button
               variant="ghost"
               size="sm"
@@ -90,31 +90,31 @@ const Navigation = () => {
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
             >
-              {isMenuOpen ? <X className="h-4 w-4 md:h-6 md:w-6" /> : <Menu className="h-4 w-4 md:h-6 md:w-6" />}
+              {isMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Navigation Menu - Only shown when menu button is clicked */}
+        {/* Mobile Navigation Menu - Slides in from right, full height, 2/3 width */}
         <div
-          className={`md:hidden bg-zinc-900 border-t border-zinc-700 mt-1 rounded-md shadow-lg transform transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0 pointer-events-none'
+          className={`md:hidden fixed top-0 right-0 h-screen w-2/3 bg-black/70 backdrop-blur-sm border-l border-zinc-700 shadow-lg transform transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
           }`}
         >
-          <div className="px-2 py-2 space-y-1.5">
+          <div className="px-4 py-6 space-y-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-2 py-1.5 text-gray-300 hover:text-white text-xs font-medium tracking-wide transition-colors duration-300 rounded-md hover:bg-zinc-800"
+                className="block px-3 py-2 text-gray-300 hover:text-white text-sm font-medium tracking-wide transition-colors duration-300 rounded-md hover:bg-black/50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
-            <div className="pt-1.5">
+            <div className="pt-4">
               <Button
-                className="w-full bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-semibold transition-all duration-300 rounded-md py-1.5 text-xs"
+                className="w-full bg-white text-black font-semibold transition-all duration-300 rounded-md py-2 text-sm"
                 onClick={() => {
                   setIsMenuOpen(false);
                   setIsContactOpen(true);
@@ -133,7 +133,7 @@ const Navigation = () => {
               className="bg-white text-black p-4 sm:p-6 rounded-lg max-w-md w-full shadow-xl relative transform transition-all duration-300 ease-in-out scale-100"
             >
               <button
-                className="absolute top-2 sm:top-3 right-2 sm:right-3 text-xl sm:text-2xl font-bold text-black"
+                className="absolute top-2 z-10 sm:top-3 right-2 sm:right-3 text-xl sm:text-2xl font-bold text-black"
                 onClick={() => setIsContactOpen(false)}
                 aria-label="Close contact modal"
               >
