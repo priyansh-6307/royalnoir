@@ -118,7 +118,7 @@ const Portfolio = () => {
       id: 14,
       title: 'Doors',
       category: 'Interior Solutions',
-      images: ['doorimg.jpeg', 'doorimg2.webp','pvcdoor.webp'],
+      images: ['doorimg.jpeg', 'doorimg2.webp', 'pvcdoor.webp'],
       description: 'Designer doors in wood, glass, or laminate finish to match your home’s aesthetics.',
       detailedDescription: 'We provide a wide range of doors, including steel profile doors, solid wooden doors, PVC doors, and glass doors. Each is crafted for durability, security, and style, with customizable finishes to match your interior.'
     },
@@ -157,22 +157,22 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio" className="py-24 bg-black">
+    <section id="portfolio" className="py-12 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-20">
-          <div className="mb-8">
-            <div className="text-sm tracking-[0.5rem] text-gray-400 uppercase mb-4">
+        <div className="text-center mb-12">
+          <div className="mb-6">
+            <div className="text-xs tracking-[0.4rem] text-gray-400 uppercase mb-3">
               EXPLORE FURTHER
             </div>
-            <h2 className="text-lg tracking-[0.2em] text-gray-300 uppercase">
+            <h2 className="text-base tracking-[0.15em] text-gray-300 uppercase">
               Our Services
             </h2>
           </div>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
           {visibleServices.map((service) => (
             <div
               key={service.id}
@@ -184,15 +184,16 @@ const Portfolio = () => {
                   src={service.images[0]}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               </div>
 
-              <div className="p-8">
-                <h3 className="text-xl font-light tracking-[0.1em] text-white uppercase mb-4 leading-tight">
+              <div className="p-4">
+                <h3 className="text-base font-light tracking-[0.08em] text-white uppercase mb-3 leading-tight">
                   {service.title}
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                <p className="text-gray-300 text-xs leading-relaxed mb-4">
                   {service.description}
                 </p>
 
@@ -203,7 +204,7 @@ const Portfolio = () => {
                     className="border-white/20 text-black hover:bg-white hover:text-black transition-all duration-300 text-xs tracking-wider uppercase"
                   >
                     More info
-                    <ExternalLink className="ml-2 h-3 w-3" />
+                    <ExternalLink className="ml-1 h-3 w-3" />
                   </Button>
                 </div>
               </div>
@@ -214,10 +215,10 @@ const Portfolio = () => {
         </div>
 
         {/* View More / View Less Button */}
-        <div className="text-center mt-10">
+        <div className="text-center mt-8">
           <Button
             variant="outline"
-            className="text-black hover:bg-gray-200 hover:text-black transition-all duration-300 px-10 py-3 uppercase text-xs tracking-wider"
+            className="text-black hover:bg-gray-200 hover:text-black transition-all duration-300 px-8 py-2 uppercase text-xs tracking-wider"
             onClick={() => setShowAll((prev) => !prev)}
           >
             {showAll ? 'View Less' : 'View More'}
@@ -225,11 +226,11 @@ const Portfolio = () => {
         </div>
 
         {/* Contact Button */}
-        <div className="text-center mt-10">
+        <div className="text-center mt-8">
           <Button
             variant="outline"
             size="lg"
-            className="border-white/30 text-black hover:bg-white hover:text-black px-12 py-4 text-sm tracking-[0.1em] uppercase transition-all duration-300"
+            className="border-white/30 text-black hover:bg-white hover:text-black px-10 py-3 text-sm tracking-[0.1em] uppercase transition-all duration-300"
             onClick={() => setIsOpen(true)}
           >
             Contact Us for All Services
@@ -240,15 +241,15 @@ const Portfolio = () => {
       {/* Contact Modal */}
       {isOpen && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
-          <div className="bg-white text-black p-6 rounded-lg max-w-md w-full shadow-xl relative">
+          <div className="bg-white text-black p-4 rounded-lg w-full max-w-md sm:max-w-lg mx-4 shadow-xl relative">
             <button
-              className="absolute top-2 right-3 text-2xl font-bold text-black"
+              className="absolute top-2 right-3 text-xl font-bold text-black"
               onClick={() => setIsOpen(false)}
             >
               ×
             </button>
-            <h2 className="text-2xl font-bold mb-4">Contact Royal Interior</h2>
-            <div className="space-y-3 text-sm">
+            <h2 className="text-xl font-bold mb-3">Contact Royal Interior</h2>
+            <div className="space-y-2 text-sm">
               <p>📞 +91 9711976969</p>
               <p>📞 +91 7088914558</p>
               <p>📧 royalinterior@example.com</p>
@@ -257,7 +258,7 @@ const Portfolio = () => {
                 href="https://wa.me/9711976969"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
+                className="inline-block mt-3 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
               >
                 Message on WhatsApp
               </a>
@@ -269,33 +270,34 @@ const Portfolio = () => {
       {/* Service Detail Modal with Image Slider */}
       {selectedService && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center">
-          <div className="bg-white text-black p-6 rounded-lg max-w-4xl w-full shadow-xl relative max-h-[90vh] overflow-y-auto">
+          <div className="bg-white text-black p-4 rounded-lg w-full max-w-md sm:max-w-2xl mx-4 shadow-xl relative max-h-[90vh] overflow-y-auto">
             <button
-              className="absolute top-2 right-3 text-2xl font-bold text-black"
+              className="absolute top-2 right-3 text-xl font-bold text-black"
               onClick={closeModal}
             >
               <X />
             </button>
-            <h2 className="text-2xl font-bold mb-4 uppercase tracking-[0.1em]">{selectedService.title}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <h2 className="text-xl font-bold mb-3 uppercase tracking-[0.08em]">{selectedService.title}</h2>
+            <div className="flex flex-col sm:grid sm:grid-cols-2 gap-4">
               {/* Image Slider */}
               <div className="relative">
                 <img
                   src={selectedService.images[currentImageIndex]}
                   alt={`${selectedService.title} ${currentImageIndex + 1}`}
-                  className="w-full h-[300px] object-cover rounded"
+                  className="w-full h-[200px] sm:h-[250px] object-cover rounded"
+                  loading="lazy"
                 />
                 <button
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full"
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 p-1 sm:p-2 rounded-full"
                   onClick={prevImage}
                 >
-                  <ChevronLeft className="h-6 w-6" />
+                  <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
                 </button>
                 <button
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 p-1 sm:p-2 rounded-full"
                   onClick={nextImage}
                 >
-                  <ChevronRight className="h-6 w-6" />
+                  <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
                 </button>
                 <div className="flex justify-center mt-2 gap-2">
                   {selectedService.images.map((_, index) => (
@@ -308,15 +310,15 @@ const Portfolio = () => {
                 </div>
               </div>
               {/* Detailed Description */}
-              <div className="space-y-4">
-                <p className="text-gray-600 text-sm leading-relaxed">{selectedService.detailedDescription}</p>
+              <div className="space-y-3">
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{selectedService.detailedDescription}</p>
                 <Button
                   variant="outline"
                   size="sm"
                   className="border-black/20 text-black hover:bg-black hover:text-white transition-all duration-300 text-xs tracking-wider uppercase"
                 >
                   Get Quote
-                  <ExternalLink className="ml-2 h-3 w-3" />
+                  <ExternalLink className="ml-1 h-3 w-3" />
                 </Button>
               </div>
             </div>

@@ -26,22 +26,38 @@ const About = () => {
 
       {/* Modal */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50">
-          <div className="bg-white text-black rounded-lg p-6 max-w-lg w-full shadow-lg relative">
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
+          <div className="bg-black text-white rounded-lg p-6 max-w-lg w-full shadow-lg relative">
             <button
-              className="absolute top-2 right-3 text-black text-xl font-bold"
+              className="absolute top-2 right-3 text-white text-xl font-bold"
               onClick={() => setIsOpen(false)}
             >
               &times;
             </button>
             <h2 className="text-2xl font-bold mb-4">About Royal Interior</h2>
-            <p className="text-gray-700 text-sm leading-relaxed">
-              With over 15 years of experience in luxury interior design, we have established ourselves 
-              as the premier choice for discerning clients who demand excellence. Our team of skilled 
-              designers and craftsmen work tirelessly to transform spaces into works of art. From contemporary 
-              minimalism to classic elegance, we specialize in creating bespoke interiors that reflect your 
-              personality while maintaining the highest standards of quality and sophistication.
-            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-8 md:mt-12 max-w-2xl mx-auto">
+          {[
+            { number: '1000+', label: 'Projects Completed' },
+            { number: '10+', label: 'Years Experience' },
+            { number: '800+', label: 'Happy Clients' },
+            { number: '2', label: 'braches in NCR'}
+
+            
+          ].map((stat, index) => (
+            <div 
+              key={index} 
+              className="text-center opacity-0 animate-fade-in" 
+              style={{ animationDelay: `${index * 0.2 + 0.5}s`, animationFillMode: 'forwards' }}
+            >
+              <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-1 sm:mb-2">
+                {stat.number}
+              </div>
+              <div className="text-xs sm:text-sm text-white">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
           </div>
         </div>
       )}
