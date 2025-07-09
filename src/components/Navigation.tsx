@@ -143,7 +143,7 @@ const Navigation = () => {
               <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
                 <p>📞 <a href="tel:+919711976969" className="hover:underline">+91 9711976969</a></p>
                 <p>📞 <a href="tel:+917088914558" className="hover:underline">+91 7088914558</a></p>
-                <p>📧 <a href="mailto:royalinterior@example.com" className="hover:underline">royalinterior@example.com</a></p>
+                <p>📧 <a href="mailto:royalinterior@example.com" className="hover:underline">atifaslam60193@gmail.com</a></p>
                 <p>📍 Galleria Market, Gaur Yamuna City, G-32, Greater Noida, Uttar Pradesh 203201</p>
                 <a
                   href="https://wa.me/9711976969"

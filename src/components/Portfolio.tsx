@@ -252,7 +252,7 @@ const Portfolio = () => {
             <div className="space-y-2 text-sm">
               <p>📞 +91 9711976969</p>
               <p>📞 +91 7088914558</p>
-              <p>📧 royalinterior@example.com</p>
+              <p>📧 atifaslam60193@gmail.com</p>
               <p>📍 Galleria Market, Gaur Yamuna City, G-32, Greater Noida, Uttar Pradesh 203201</p>
               <a
                 href="https://wa.me/9711976969"
